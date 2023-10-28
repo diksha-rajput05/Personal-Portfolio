@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Your existing CSS styles */
+        /* Add styles for the Swiper navigation and pagination */
+        .swiper-button-prev,
+        .swiper-button-next {
+            font-size: 1.5rem;
+            color: var(--first-color);
+        }
+        .portfolio_container {
+            overflow: hidden; /* Hide overflowing content */
+            position: relative; /* Set position to establish a new stacking context */
+        }
+        .swiper-container {
+            width: 100%; /* Set the width of the Swiper container */
+        }
+        .swiper-wrapper {
+            display: flex; /* Display slides in a row */
+            transition: transform 0.3s; /* Apply smooth transition when sliding */
+        }
+        .swiper-slide {
+            flex: 0 0 100%; /* Make each slide occupy the width of the container */
+        }
+    </style>
+    <title>Swiper Carousel Example</title>
+</head>
+<body>
+    <section class="portfolio section" id="portfolio">
+        <h2 class="section_title">Portfolio</h2>
+        <span class="section_subtitile">Lorem, ipsum dolor.</span>
+
+        <div class="portfolio_container container">
+            <div class="swiper-wrapper">
+                <!-- Portfolio content -->
+                <div class="swiper-slide portfolio_content">
+                    <!-- Portfolio item 1 content -->
+                    <div class="portfolio_content grid">
+                        <img src="img/screen.jpg" alt="" class="portfolio_img">
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">Modern Website</h3>
+                            <p class="portfolio_description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Explicabo.</p>
+                            <a href="#" class="button button-flex button-small portfolio_button">
+                                Demo
+                                <i class="uil uil-arrow-right button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide portfolio_content">
+                    <!-- Portfolio item 2 content -->
+                    <div class="portfolio_content grid">
+                        <img src="img/screen2.jpg" alt="" class="portfolio_img">
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">Modern Website</h3>
+                            <p class="portfolio_description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Explicabo.</p>
+                            <a href="#" class="button button-flex button-small portfolio_button">
+                                Demo
+                                <i class="uil uil-arrow-right button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide portfolio_content">
+                    <!-- Portfolio item 3 content -->
+                    <div class="portfolio_content grid">
+                        <img src="img/screen2.jpg" alt="" class="portfolio_img">
+                        <div class="portfolio_data">
+                            <h3 class="portfolio_title">Modern Website</h3>
+                            <p class="portfolio_description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Explicabo.</p>
+                            <a href="#" class="button button-flex button-small portfolio_button">
+                                Demo
+                                <i class="uil uil-arrow-right button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more portfolio content here -->
+            </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+</body>
+</html>
